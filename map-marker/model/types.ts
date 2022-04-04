@@ -1,0 +1,1 @@
+export type ocorrencia = 'Deslizamentos de Barreiras' | 'Alagamentos'

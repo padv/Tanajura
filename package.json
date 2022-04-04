@@ -2,13 +2,20 @@
   "name": "tanajura",
   "version": "1.0.0",
   "description": "College Project",
-  "main": "index.js",
+  "main": "controller.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:typecheck": "tsc --noEmit",
+    "lint:check": "eslint src/**/*.ts",
+    "lint:fix": "eslint --fix src/**/*.ts"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   }
 }
