@@ -2,12 +2,11 @@
   "name": "tanajura",
   "version": "1.0.0",
   "description": "College Project",
-  "main": "controller.ts",
+  "main": "app.ts",
   "scripts": {
-    "build": "tsc",
-    "build:typecheck": "tsc --noEmit",
-    "lint:check": "eslint src/**/*.ts",
-    "lint:fix": "eslint --fix src/**/*.ts"
+    "compile": "tsc && node app.ts",
+    "dev": "nodemon app.ts --exec \"npm run compile\"",
+    "del": "node del.js"
   },
   "author": "",
   "license": "MIT",
@@ -15,6 +14,7 @@
     "axios": "^0.26.1"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   }

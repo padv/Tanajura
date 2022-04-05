@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "./map-marker/dist",
+    "rootDir": "./map-marker",
+    "lib": ["ES6"],
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["map-marker/**/*"],
+  "exclude": ["node_modules"]
+} 

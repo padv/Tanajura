@@ -2,7 +2,7 @@ import { ocorrencia } from "./types"
 
 export interface Processo {
     id: number
-    latitude: string
+    latitude: number
     longitude: number
     ocorrencia: ocorrencia
 }

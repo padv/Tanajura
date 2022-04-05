@@ -1,4 +1,4 @@
-import { Processo } from "./processo.js"
+import { Processo } from "./processo"
 
 export class Ocorrencias {
     lista: Processo[];
@@ -6,8 +6,7 @@ export class Ocorrencias {
     constructor(indiceProcessos:any[], coordenadasProcessos:any[]) {
         const processosValidos = this.limparSemCoordenadas(coordenadasProcessos);
         const listaProcessos = this.criarArrayCompleto(indiceProcessos, processosValidos);
-        this.lista = listaProcessos;
-        console.log(this.lista);
+        this.lista = listaProcessos;     
     }
 
 

@@ -1,16 +1,17 @@
+import { ApiBody } from "../model/apiBody";
+
 const {Ocorrencias} = require("../model/ocorrencias.js");
 
 const {api} = require('../apis/api.js')
 //FUNÇÃO DISPARADA AO BATER NA ROTA DE PEGAR LOCALIZAÇÕES (REQUISIÇÃO DO FRONTEND) 
     //BUSCAR INFORMAÇÃO NA CACHE, SE NÃO TIVER:
 
-controller();
 
-async function controller() {
+export async function controller() {
 
     const url = "http://dados.recife.pe.gov.br/api/3/action/datastore_search"
 
-    const firstApiBody = {    
+    const firstApiBody:ApiBody = {    
         "resource_id": "7a22d871-250e-419a-9b5a-1cab19db7be5",
         "filters": {
             "processo_ocorrencia": ["Deslizamentos de Barreiras","Alagamentos"]
@@ -21,9 +22,9 @@ async function controller() {
 
     const indiceProcessos = await api(url, firstApiBody);
 
-    const numeroDosProcessos = indiceProcessos.map(p => p.processo_numero);
+    const numeroDosProcessos = indiceProcessos.map((p: { processo_numero: any; }) => p.processo_numero);
 
-    const secondApiBody = {    
+    const secondApiBody:ApiBody = {    
         "resource_id": "5eaed1e8-aa7f-48d7-9512-638f80874870",
         "filters": {
             "processo_numero": numeroDosProcessos
@@ -38,6 +39,8 @@ async function controller() {
     //console.log(coordenadasProcessos);
 
     const ocorrencias = new Ocorrencias(indiceProcessos, coordenadasProcessos);
+
+    return ocorrencias;
 
     //console.log(localizacao);
 
