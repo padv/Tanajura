@@ -19,6 +19,6 @@ function deleteFolderRecursive(path) {
 
 console.log("Cleaning working tree...");
 
-deleteFolderRecursive("./map-marker/dist");
+deleteFolderRecursive("./dist");
 
 console.log("Successfully cleaned working tree!");

@@ -1,4 +1,4 @@
-import { ocorrencia } from "./types"
+import type { ocorrencia } from "./types"
 
 export interface Processo {
     id: number

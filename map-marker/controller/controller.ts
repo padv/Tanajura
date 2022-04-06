@@ -1,4 +1,4 @@
-import { ApiBody } from "../model/apiBody";
+import type { ApiBody } from "../model/apiBody";
 
 const {Ocorrencias} = require("../model/ocorrencias.js");
 
@@ -7,7 +7,7 @@ const {api} = require('../apis/api.js')
     //BUSCAR INFORMAÇÃO NA CACHE, SE NÃO TIVER:
 
 
-export async function controller() {
+export async function mapMarkerController() {
 
     const url = "http://dados.recife.pe.gov.br/api/3/action/datastore_search"
 
