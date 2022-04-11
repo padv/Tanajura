@@ -19,3 +19,10 @@ npm install
 npm run dev
 ```
 
+
+Para testar se a API está funcionando, executar (em outra instância do terminal):
+
+```
+node apitest.js 
+```
+
