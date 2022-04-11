@@ -1,3 +1,5 @@
+//CLASSE RESPONSÁVEL PELO TRATAMENTO E EXIBIÇÃO DA LISTA DE PROCESSOS
+
 import type { Processo } from "./processo"
 
 export class Ocorrencias {

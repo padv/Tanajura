@@ -1,11 +1,10 @@
+//FUNÇÃO RESPONSÁVEL POR ENTREGAR LISTA DE OCORRENCIAS TRATADA PARA O PONTO DE ENTRADA DO BACKEND (api.ts)
+
 import type { ApiBody } from "../model/apiBody";
 
 const {Ocorrencias} = require("../model/ocorrencias.js");
 
 const {api} = require('../apis/api.js')
-//FUNÇÃO DISPARADA AO BATER NA ROTA DE PEGAR LOCALIZAÇÕES (REQUISIÇÃO DO FRONTEND) 
-    //BUSCAR INFORMAÇÃO NA CACHE, SE NÃO TIVER:
-
 
 export async function mapMarkerController() {
 
@@ -35,21 +34,8 @@ export async function mapMarkerController() {
 
     const coordenadasProcessos = await api(url, secondApiBody);
 
-    //console.log(indiceProcessos);
-    //console.log(coordenadasProcessos);
-
     const ocorrencias = new Ocorrencias(indiceProcessos, coordenadasProcessos);
 
     return ocorrencias;
 
-    //console.log(localizacao);
-
 }
-
-
-
-        //CHAMAR FUNÇÃO DA API PARA PEGAR OS INCIDENTES(FUNÇÃO QUE DEVE ESTAR NA PASTA API)
-        //CHAMAR SEGUNDA API
-        //FILTRAR DADOS PARA MONTAR OBJETO
-        //SALVAR NA CACHE
-        //RETORNAR OBJETO PARA O FRONTEND

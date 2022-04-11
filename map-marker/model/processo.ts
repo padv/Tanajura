@@ -1,3 +1,5 @@
+//MODELO DE COMO UM PROCESSO DEVE SER ESTRUTURADO
+
 import type { ocorrencia } from "./types"
 
 export interface Processo {
