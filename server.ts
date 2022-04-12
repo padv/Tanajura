@@ -23,9 +23,8 @@ export class Server {
             if(ttl === undefined){
                 ttl = this.defaultTTL;            
             }
-            const json = await func(route,ttl);
-            console.log("Peguei JSON!");
-            res.send(json);
+            const resp = await func(route,ttl);
+            res.send(resp);
           })
     }
 
