@@ -4,6 +4,7 @@
   "description": "College Project",
   "main": "app.ts",
   "scripts": {
+    "start": "node ./dist/app.js",
     "compile": "tsc && node ./dist/app.js",
     "dev": "nodemon app.ts --exec \"npm run compile\"",
     "del": "node del.js"
