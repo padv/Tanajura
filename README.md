@@ -1,5 +1,9 @@
 # Tanajura
- College Project
+
+Aplicação desenvolvida em Node e React Native, com alerta de chuvas e mapa de risco para moradores da Região Metropolitana do Recife.
+
+
+College Project
 
 Para rodar o projeto [(requer node.js instalado no seu sistema)](https://nodejs.org/en/download/):
 
