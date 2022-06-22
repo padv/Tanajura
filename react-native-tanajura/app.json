@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "react-native-tanajura",
+    "slug": "react-native-tanajura",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
