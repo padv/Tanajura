@@ -6,7 +6,9 @@ const express = require("express");
 const NodeCache = require("node-cache");
 class Server {
     constructor(port) {
+        var cors = require('cors');
         this.server = express();
+        this.server.use(cors());
         this.port = port;
         this.subirServer();
         this.cache = this.subirCache();

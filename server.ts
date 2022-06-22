@@ -4,6 +4,7 @@ import { Application } from "express";
 import express = require("express");
 import NodeCache = require("node-cache");
 
+
 export class Server {
     server: Application;
     port: number;
@@ -11,7 +12,9 @@ export class Server {
     defaultTTL: number;
 
     constructor(port:number){
+        var cors = require('cors');
         this.server = express();
+        this.server.use(cors());
         this.port = port;
         this.subirServer();
         this.cache = this.subirCache();
